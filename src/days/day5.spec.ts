@@ -5,7 +5,7 @@ describe("day1", function() {
     const result = part1("src/data/input5.txt");
     expect(result.outputs.length).toEqual(10);
     expect(result.outputs.filter(e => e > 0).length).toEqual(1);
-    expect(result.outputs[result.outputs.length - 1] !== 0).toBeTruthy();
+    expect(result.outputs[result.outputs.length - 1]).toEqual(8332629);
   });
 });
 
