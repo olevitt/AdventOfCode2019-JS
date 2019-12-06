@@ -1,0 +1,13 @@
+import { part1 } from './day2'
+
+/*describe('day1', function () {
+  it('should return value at position 0', function () {
+    expect(part1('src/data/input2.txt')).toEqual(3348909);
+  });
+});
+
+describe('day2', function () {
+  it('should calculate total fuel required including additional fuel', function () {
+    expect(part1('src/data/input2.txt')).toEqual(5020494);
+  });
+});*/

@@ -1,0 +1,29 @@
+{
+  "name": "adventofcode",
+  "version": "1.0.0",
+  "description": "Advent of code",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "ts-node-dev --respawn --transpileOnly src/index.ts",
+    "test": "jest --watchAll"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/node": "^7.7.4",
+    "@babel/preset-env": "^7.7.4",
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.1",
+    "ts-node-dev": "^1.0.0-pre.44"
+  },
+  "dependencies": {
+    "@dagrejs/graphlib": "^2.1.4",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
+    "ts-jest": "^24.2.0",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.2"
+  }
+}
