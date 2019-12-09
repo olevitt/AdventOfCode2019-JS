@@ -9,11 +9,22 @@ describe("day1", function() {
   });
 });
 
-/*
-describe("day2", function() {
-  it("should find optimal noun / verb", function() {
-    expect(part2("src/data/input5.txt", 19690720)).toEqual([67, 18]);
-    // Real answer : 67 * 100 + 18 = 6718
+describe("day1", function() {
+  it("should check input equals 8", function() {
+    const result = part2("src/data/input5-2-1.txt", 8);
+    expect(result.outputs.length).toEqual(1);
+    expect(result.outputs[0]).toEqual(1);
+  });
+
+  it("should check input different from 8", function() {
+    const result = part2("src/data/input5-2-1.txt", 9);
+    expect(result.outputs.length).toEqual(1);
+    expect(result.outputs[0]).toEqual(0);
+  });
+
+  it("should work on real data", function() {
+    const result = part2("src/data/input5-part2.txt", 5);
+    expect(result.outputs.length).toEqual(1);
+    expect(result.outputs[0]).toEqual(0);
   });
 });
-*/

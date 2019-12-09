@@ -9,15 +9,9 @@ export const part1 = (fileName: string): Context => {
   return postProgram;
 };
 
-export const part2 = (fileName: string, target: number): Array<number> => {
+export const part2 = (fileName: string, progInput: number = 1): Context => {
   const input = readFile(fileName);
   const data = input.split(",").map(e => Number(e));
-  for (var i = 0; i < 100; i++) {
-    for (var j = 0; j < 100; j++) {
-      if (runProgram(data, i, j)[0] === target) {
-        return [i, j];
-      }
-    }
-  }
-  return [0, 0];
+  const postProgram = runProgram(data, undefined, undefined, progInput);
+  return postProgram;
 };

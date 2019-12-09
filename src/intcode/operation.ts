@@ -59,8 +59,71 @@ class Op4 extends Operation {
   }
 }
 
+class Op5 extends Operation {
+  accept(context: Context) {
+    return context.getOpCode() === 5;
+  }
+
+  process(context: Context) {
+    if (context.getParameterAt(0) !== 0) {
+      context.position = context.getParameterAt(1);
+    } else {
+      context.position += 3;
+    }
+  }
+}
+
+class Op6 extends Operation {
+  accept(context: Context) {
+    return context.getOpCode() === 6;
+  }
+
+  process(context: Context) {
+    if (context.getParameterAt(0) === 0) {
+      context.position = context.getParameterAt(1);
+    } else {
+      context.position += 3;
+    }
+  }
+}
+
+class Op7 extends Operation {
+  accept(context: Context) {
+    return context.getOpCode() === 7;
+  }
+
+  process(context: Context) {
+    const target = context.data[context.position + 3];
+    context.data[target] =
+      context.getParameterAt(0) < context.getParameterAt(1) ? 1 : 0;
+    context.position += 4;
+  }
+}
+
+class Op8 extends Operation {
+  accept(context: Context) {
+    return context.getOpCode() === 8;
+  }
+
+  process(context: Context) {
+    const target = context.data[context.position + 3];
+    context.data[target] =
+      context.getParameterAt(0) === context.getParameterAt(1) ? 1 : 0;
+    context.position += 4;
+  }
+}
+
 const getOperations = (): ReadonlyArray<Operation> => {
-  return [new Op1(), new Op2(), new Op3(), new Op4()];
+  return [
+    new Op1(),
+    new Op2(),
+    new Op3(),
+    new Op4(),
+    new Op5(),
+    new Op6(),
+    new Op7(),
+    new Op8()
+  ];
 };
 
 export default getOperations();
